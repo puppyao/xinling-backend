@@ -1,0 +1,8 @@
+[phases.setup]
+nixPkgs = ["python311", "SDL2", "SDL2_mixer", "SDL2_image", "SDL2_ttf"]
+
+[phases.install]
+cmds = ["pip install -r requirements.txt"]
+
+[phases.start]
+cmd = ["gunicorn", "app:app"]
